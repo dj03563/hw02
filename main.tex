@@ -19,7 +19,7 @@
 \usepackage[table]{xcolor}
 \usepackage{amsfonts,graphicx,amsmath,hyperref}
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$dj03563$}  % replace with your ID, e.g. oy02945
 \date{Due: 19h, 16th February, 2018}
 
 
@@ -36,25 +36,32 @@
 
 \begin{parts}
 
- 
-  \part[5] Determine the domain, codomain and set of values for the following function to be 
-  \begin{subparts}
-  \subpart Partial
-  \subpart Total
-  \end{subparts}
-
+  
+  \part[5] Determine the domain, codomain and set of values for the following function to be 1) partial and 2) total: 
   \begin{center}
     $y=\sqrt{x}$
   \end{center}
 
   \begin{solution}
-    % Write your solution here
+   
+ 1) Domain=Real Numbers $\{ x: x \rightarrow \Re \}$
+
+Co-domain=Real Numbers $\{ f(x) f(x) \rightarrow \Re \}$
+
+2)Domain=Natural Numbers $\{x: x \rightarrow \aleph \}$
+
+Co-Domain=Positive Real Numbers $\{ f(x): f(x) \rightarrow \Re  \}$
+
+
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
-    % Write your solution here
+
+ Given that $f(S)$ represents the smallest integer so that the bit of S is 1 and $f(S)$ =0 when string S is an empty string.
+
+Since $f(S)$ is not defined for such cases, it is not a valid function from all bit strings to integers.
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -65,7 +72,13 @@
   \end{subparts}
 
   \begin{solution}
-    % Write your solution here
+
+i) It is reflexive because both $X$ and $Y$ share the class with themselves. It is also symmetric because $X$ and $Y$ share a class with each other, but it is not transitive, assuming if $Y$ shares a class with another student $Z$, it is not necessary $X$ shares a class with $Z$.
+
+ii) It is reflexive because $X$ and $Y$ rhyme with themselves. It is also symmetric since $X$ rhymes with $Y$ and $Y$ rhymes with $X$. It is transitive too since $X$ would rhyme with any othere element $Z$ given that $Y$ rhymes with $Z$.
+
+iii) It is reflexive since $X$ and $Y$ are proper subsets of themselves. It may or may not be symmetric, given that they can be only symmetric if $X=Y$. It is transitive since if $X$ is a subset of $Y$, and $Y$ is a subset of another set $Z$, then by property $X$ is also a subset of $Z$ since $X$ is contained in $Y$.
+
   \end{solution}
 
 \end{parts}
@@ -73,7 +86,10 @@
 %Long questions (75)
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
-    % Write your solution here
+  
+This function is an example of an onto function, since $A = f^{-1}(B)$ so it means $f(A) \rightarrow B$. From this it can be concluded that the set of values given by $f(A)$ will be the same as domain of B in the universe of discourse. Hence, if $f(A)=B$, then $f(A) \subseteq B$
+
+In other words, $\forall B \exists A \{ f(A)=B \} $
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -88,7 +104,8 @@
 \end{center}
 
   \begin{solution}
-    % Write your solution here
+    
+If we select a specific element from a subset of A, given that the subset in A is even in number, taking out the selected element will give its odd corresopndent subset. Inversely, if we add the same element in the subset of B, it would become the subset of A with even number of elements. Taking this theory forward, every subset of A will have a corresponding subset in B, and vice versa. This proves that their cardinalities are same and hence proving $|A| = |B|$. 
   \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
@@ -121,11 +138,19 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
   \begin{parts}
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
-    % Write your solution here
+
+Number of dots in Cap Height = $|\dfrac{n}{2}|+1-\dfrac{|\dfrac{n}{2}|(|\dfrac{n}{2}|+1)}{2}$ 
+
+Number of dots in Cap Width = $n + 1$ 
+
+Number of dots in Stem height = $2(n-1)$ 
+
+    $M_n = (n+1)(|\dfrac{n}{2}|+1)-(\dfrac{|\dfrac{n}{2}|(|\dfrac{n}{2}|+1)}{2})+2(n-1)$
   \end{solution}
     \part[5] What is the total height of the $20$th mushroom in the series? 
   \begin{solution}
-    % Write your solution here
+
+$M_{20} = (20+1)(|\dfrac{20}{2}|+1)-(\dfrac{|\dfrac{20}{2}|(|\dfrac{20}{2}|+1)}{2})+2(20-1)= 30$
   \end{solution}
 \end{parts}
 
@@ -153,12 +178,15 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
   \part[10] To begin, prove that the Fibonacci series is countable.
  
     \begin{solution}
-    % Write your solution here
+
+
+The nth term in Fibonacci series is calculated using last two terms, so it gives a distinct number every time. We can conclude it is an injective function this way. Since all terms are then distinct, we always use distinct terms proving a surjection, and hence a bijection. This can further take us to the conclusion that the cardinality of the set of Fibonacci terms is same as the set of Natural numbers. Thus, if the set of natural numbers, assume $X$ is countable, then the set of fibonacci numbers, $F$, is also countable since $F \subset X$ 
   \end{solution}
-  \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
+  \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Wythoff Array is countable. 
 
   \begin{solution}
-    % Write your solution here
+    
+Each row of the Wythoff Array is formed by the principle of Fibonacci recurrence. By replacing one element of the series, we divide the row in two Fibonacci series. Since both divided Fibbonaci series are countable, the entire row and therefore by transition property the entire array is countable.
   \end{solution}
 \end{parts}
 
